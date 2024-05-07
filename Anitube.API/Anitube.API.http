@@ -1,0 +1,6 @@
+@Anitube.API_HostAddress = http://localhost:5270
+
+GET {{Anitube.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
