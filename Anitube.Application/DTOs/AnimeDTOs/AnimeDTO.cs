@@ -1,4 +1,5 @@
 ﻿using Anitube.Application.DTOs.EpisodeDTOs;
+using Anitube.Application.DTOs.GenreDTOs;
 
 namespace Anitube.Application.DTOs.AnimeDTOs
 {
@@ -18,6 +19,7 @@ namespace Anitube.Application.DTOs.AnimeDTOs
         public required int TotalEpisodes { get; set; }
         public required int AvailableEpisodes { get; set; }
         public List<EpisodeDTO> Episodes { get; set; } = new List<EpisodeDTO>();
+        public List<GenreDTO> Genres { get; set; } = new List<GenreDTO>();
         public DateOnly ReleaseDate { get; set; }
     }
 }

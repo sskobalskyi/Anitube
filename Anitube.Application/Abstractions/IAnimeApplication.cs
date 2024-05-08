@@ -10,5 +10,7 @@ namespace Anitube.Application.Abstractions
         Task UpdateAsync(UpdateAnimeDTO entity);
         Task DeleteAsync(AnimeLightDTO entity);
         Task<AnimeDTO> GetEnrichedAsync(int id);
+
+        Task AddGenreAsync(AddAnimeGenreDTO entity);
     }
 }

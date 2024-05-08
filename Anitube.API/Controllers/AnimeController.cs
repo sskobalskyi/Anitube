@@ -1,4 +1,5 @@
 using Anitube.API.ViewModels.Anime;
+using Anitube.API.ViewModels.AnimeViewModels;
 using Anitube.Application.Abstractions;
 using Anitube.Application.DTOs.AnimeDTOs;
 using AutoMapper;
@@ -44,6 +45,13 @@ namespace Anitube.API.Controllers
         public async Task Put([FromBody] UpdateAnimeViewModel anime)
         {
             await _animeApplication.UpdateAsync(_mapper.Map<UpdateAnimeDTO>(anime));
+        }
+
+        [HttpPut]
+        [Route("genre")]
+        public async Task AddGenre([FromBody] AddAnimeGenreViewModel animeGenre)
+        {
+            await _animeApplication.AddGenreAsync(_mapper.Map<AddAnimeGenreDTO>(animeGenre));
         }
 
         [HttpDelete]

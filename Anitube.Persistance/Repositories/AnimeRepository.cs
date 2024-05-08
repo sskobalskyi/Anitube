@@ -25,7 +25,11 @@ namespace Anitube.Persistance.Repositories
 
         public async Task<Anime> GetEnrichedAsync(int id)
         {
-            return await _context.Animes.Include(a => a.Episodes).FirstOrDefaultAsync(a => a.Id == id);
+            return await _context.Animes
+                .Include(a => a.Episodes)
+                .Include(a => a.AnimeGenres)
+                .ThenInclude(ag => ag.Category)
+                .FirstOrDefaultAsync(a => a.Id == id);
         }
 
         public Task AddAsync(Anime entity)
@@ -37,6 +41,12 @@ namespace Anitube.Persistance.Repositories
         public Task UpdateAsync(Anime entity)
         {
             _context.Animes.Update(entity);
+            return _context.SaveChangesAsync();
+        }
+
+        public Task AddGenreAsync(AnimeGenre entity)
+        {
+            _context.AnimeGenres.Add(entity);
             return _context.SaveChangesAsync();
         }
 
