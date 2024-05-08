@@ -54,6 +54,13 @@ namespace Anitube.API.Controllers
             await _animeApplication.AddGenreAsync(_mapper.Map<AddAnimeGenreDTO>(animeGenre));
         }
 
+        [HttpPut]
+        [Route("voiceover")]
+        public async Task AddVoicevoer([FromBody] AddAnimeVoiceoverViewModel animeVoiceover)
+        {
+            await _animeApplication.AddVoiceoverAsync(_mapper.Map<AddAnimeVoiceoverDTO>(animeVoiceover));
+        }
+
         [HttpDelete]
         public async Task Delete([FromBody] AnimeLightViewModel anime)
         {

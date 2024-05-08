@@ -6,5 +6,6 @@ namespace Anitube.Core.Repositories
     {
         Task<Anime> GetEnrichedAsync(int id);
         Task AddGenreAsync(AnimeGenre entity);
+        Task AddVoiceoverAsync(AnimeVoiceover entity);
     }
 }

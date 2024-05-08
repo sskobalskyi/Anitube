@@ -42,14 +42,21 @@ namespace Anitube.Application.Applications
             return _repository.UpdateAsync(_mapper.Map<Anime>(entity));
         }
 
+        public Task AddGenreAsync(AddAnimeGenreDTO entity)
+        {
+            return _repository.AddGenreAsync(_mapper.Map<AnimeGenre>(entity));
+        }
+
+        public Task AddVoiceoverAsync(AddAnimeVoiceoverDTO entity)
+        {
+            return _repository.AddVoiceoverAsync(_mapper.Map<AnimeVoiceover>(entity));
+        }
+
         public Task DeleteAsync(AnimeLightDTO entity)
         {
             return _repository.DeleteAsync(_mapper.Map<Anime>(entity));
         }
 
-        public Task AddGenreAsync(AddAnimeGenreDTO entity)
-        {
-            return _repository.AddGenreAsync(_mapper.Map<AnimeGenre>(entity));
-        }
+
     }
 }

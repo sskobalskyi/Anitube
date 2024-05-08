@@ -1,4 +1,4 @@
-﻿using Anitube.API.ViewModels.VoiceoverActorViewModel;
+﻿using Anitube.API.ViewModels.VoiceoverActorViewModels;
 using Anitube.Application.Abstractions;
 using Anitube.Application.DTOs.VoiceoverActorDTOs;
 using AutoMapper;

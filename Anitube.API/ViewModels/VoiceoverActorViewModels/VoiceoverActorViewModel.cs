@@ -1,4 +1,4 @@
-﻿namespace Anitube.API.ViewModels.VoiceoverActorViewModel
+﻿namespace Anitube.API.ViewModels.VoiceoverActorViewModels
 {
     public class VoiceoverActorViewModel
     {
