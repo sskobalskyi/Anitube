@@ -4,7 +4,7 @@ using Anitube.Core.Entities;
 using Anitube.Core.Repositories;
 using AutoMapper;
 
-namespace Anitube.Application.UserApplication
+namespace Anitube.Application.Applications
 {
     public class GenreApplication : IGenreApplication
     {
