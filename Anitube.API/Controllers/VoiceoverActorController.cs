@@ -38,13 +38,13 @@ namespace Anitube.API.Controllers
         }
 
         [HttpPut]
-        public async Task PutGenre([FromBody] CreateVoiceoverActorViewModel genre)
+        public async Task PutGenre([FromBody] VoiceoverActorViewModel genre)
         {
             await _voiceoverActorApplication.UpdateAsync(_mapper.Map<VoiceoverActorDTO>(genre));
         }
 
         [HttpDelete]
-        public async Task DeleteGenre([FromBody] CreateVoiceoverActorViewModel genre)
+        public async Task DeleteGenre([FromBody] VoiceoverActorViewModel genre)
         {
             await _voiceoverActorApplication.DeleteAsync(_mapper.Map<VoiceoverActorDTO>(genre));
         }
