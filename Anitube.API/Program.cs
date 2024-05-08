@@ -39,6 +39,9 @@ builder.Services.AddScoped<IGenreApplication, GenreApplication>();
 builder.Services.AddScoped<IVoiceoverActorRepository, VoiceoverActorRepository>();
 builder.Services.AddScoped<IVoiceoverActorApplication, VoiceoverActorApplication>();
 
+builder.Services.AddScoped<IVoiceoverStudioRepository, VoiceoverStudioRepository>();
+builder.Services.AddScoped<IVoiceoverStudioApplication, VoiceoverStudioApplication>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
