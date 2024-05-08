@@ -33,6 +33,9 @@ builder.Services.AddScoped<IAnimeApplication, AnimeApplication>();
 builder.Services.AddScoped<IEpisodeRepository, EpisodeRepository>();
 builder.Services.AddScoped<IEpisodeApplication, EpisodeApplication>();
 
+builder.Services.AddScoped<IGenreRepository, GenreRepository>();
+builder.Services.AddScoped<IGenreApplication, GenreApplication>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
