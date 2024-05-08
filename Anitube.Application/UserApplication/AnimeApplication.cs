@@ -46,5 +46,10 @@ namespace Anitube.Application.UserApplication
         {
             return _repository.DeleteAsync(_mapper.Map<Anime>(entity));
         }
+
+        public Task AddGenreAsync(AddAnimeGenreDTO entity)
+        {
+            return _repository.AddGenreAsync(_mapper.Map<AnimeGenre>(entity));
+        }
     }
 }

@@ -11,10 +11,20 @@ namespace Anitube.Application.DTOs.Profiles
         public ApplicationProfile()
         {
             #region Anime
-            CreateMap<AnimeDTO, Anime>().ReverseMap();
+            CreateMap<AnimeDTO, Anime>();
+            CreateMap<Anime, AnimeDTO>()
+                .ForMember(dest => dest.Genres, opt => opt.MapFrom(src => src.AnimeGenres));
             CreateMap<AnimeLightDTO, Anime>().ReverseMap();
             CreateMap<CreateAnimeDTO, Anime>().ReverseMap();
             CreateMap<UpdateAnimeDTO, Anime>().ReverseMap();
+            #endregion
+
+            #region AnimeGenre
+            CreateMap<AddAnimeGenreDTO, AnimeGenre>().ReverseMap();
+            CreateMap<AnimeGenre, GenreDTO>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Category.Id))
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Category.Name))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Category.Description));
             #endregion
 
             #region Episode

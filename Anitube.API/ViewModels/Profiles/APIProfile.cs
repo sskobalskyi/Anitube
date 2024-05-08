@@ -1,4 +1,5 @@
 ﻿using Anitube.API.ViewModels.Anime;
+using Anitube.API.ViewModels.AnimeViewModels;
 using Anitube.API.ViewModels.Episode;
 using Anitube.API.ViewModels.GenreViewModels;
 using Anitube.Application.DTOs.AnimeDTOs;
@@ -17,6 +18,11 @@ namespace Anitube.API.ViewModels.Profiles
             CreateMap<AnimeLightViewModel, AnimeLightDTO>().ReverseMap();
             CreateMap<CreateAnimeViewModel, CreateAnimeDTO>().ReverseMap();
             CreateMap<UpdateAnimeViewModel, UpdateAnimeDTO>().ReverseMap();
+            #endregion
+
+            #region AnimeGenre
+            CreateMap<AddAnimeGenreViewModel, AddAnimeGenreDTO>().ReverseMap();
+            CreateMap<GenreDTO, GenreViewModel>();
             #endregion
 
             #region Episode
