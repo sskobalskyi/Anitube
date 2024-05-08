@@ -1,7 +1,9 @@
 ﻿using Anitube.API.ViewModels.Anime;
 using Anitube.API.ViewModels.Episode;
+using Anitube.API.ViewModels.GenreViewModels;
 using Anitube.Application.DTOs.AnimeDTOs;
 using Anitube.Application.DTOs.EpisodeDTOs;
+using Anitube.Application.DTOs.GenreDTOs;
 using AutoMapper;
 
 namespace Anitube.API.ViewModels.Profiles
@@ -20,6 +22,11 @@ namespace Anitube.API.ViewModels.Profiles
             #region Episode
             CreateMap<EpisodeViewModel, EpisodeDTO>().ReverseMap();
             CreateMap<CreateEpisodeViewModel, CreateEpisodeDTO>().ReverseMap();
+            #endregion
+
+            #region Genre
+            CreateMap<GenreViewModel, GenreDTO>().ReverseMap();
+            CreateMap<CreateGenreViewModel, CreateGenreDTO>().ReverseMap();
             #endregion
         }
     }
