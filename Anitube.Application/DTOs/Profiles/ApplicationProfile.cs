@@ -1,6 +1,7 @@
 ﻿using Anitube.Application.DTOs.AnimeDTOs;
 using Anitube.Application.DTOs.EpisodeDTOs;
 using Anitube.Application.DTOs.GenreDTOs;
+using Anitube.Application.DTOs.UserDTOs;
 using Anitube.Application.DTOs.VoiceoverActorDTOs;
 using Anitube.Application.DTOs.VoiceoverStudioDTOs;
 using Anitube.Core.Entities;
@@ -56,6 +57,11 @@ namespace Anitube.Application.DTOs.Profiles
             #region VoiceoverActor
             CreateMap<VoiceoverActorDTO, VoiceoverActor>().ReverseMap();
             CreateMap<CreateVoiceoverActorDTO, VoiceoverActor>().ReverseMap();
+            #endregion
+
+            #region User
+            CreateMap<UserDTO, User>().ReverseMap();
+            CreateMap<CreateUserDTO, User>().ReverseMap();
             #endregion
         }
     }
