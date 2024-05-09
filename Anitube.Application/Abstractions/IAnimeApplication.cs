@@ -12,5 +12,6 @@ namespace Anitube.Application.Abstractions
         Task<AnimeDTO> GetEnrichedAsync(int id);
 
         Task AddGenreAsync(AddAnimeGenreDTO entity);
+        Task AddVoiceoverAsync(AddAnimeVoiceoverDTO entity);
     }
 }

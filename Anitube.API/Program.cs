@@ -1,7 +1,7 @@
 using Anitube.API.ViewModels.Profiles;
 using Anitube.Application.Abstractions;
 using Anitube.Application.DTOs.Profiles;
-using Anitube.Application.UserApplication;
+using Anitube.Application.Applications;
 using Anitube.Core.Repositories;
 using Anitube.Persistance;
 using Anitube.Persistance.Repositories;
@@ -35,6 +35,12 @@ builder.Services.AddScoped<IEpisodeApplication, EpisodeApplication>();
 
 builder.Services.AddScoped<IGenreRepository, GenreRepository>();
 builder.Services.AddScoped<IGenreApplication, GenreApplication>();
+
+builder.Services.AddScoped<IVoiceoverActorRepository, VoiceoverActorRepository>();
+builder.Services.AddScoped<IVoiceoverActorApplication, VoiceoverActorApplication>();
+
+builder.Services.AddScoped<IVoiceoverStudioRepository, VoiceoverStudioRepository>();
+builder.Services.AddScoped<IVoiceoverStudioApplication, VoiceoverStudioApplication>();
 
 var app = builder.Build();
 

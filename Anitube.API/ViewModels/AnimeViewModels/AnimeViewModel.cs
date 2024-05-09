@@ -1,5 +1,6 @@
 ﻿using Anitube.API.ViewModels.Episode;
 using Anitube.API.ViewModels.GenreViewModels;
+using Anitube.API.ViewModels.VoiceoverStudioViewModels;
 
 namespace Anitube.API.ViewModels.Anime
 {
@@ -20,6 +21,7 @@ namespace Anitube.API.ViewModels.Anime
         public required int AvailableEpisodes { get; set; }
         public List<EpisodeViewModel> Episodes { get; set; } = new List<EpisodeViewModel>();
         public List<GenreViewModel> Genres { get; set; } = new List<GenreViewModel>();
+        public List<VoiceoverStudioViewModel> Voiceovers { get; set; } = new List<VoiceoverStudioViewModel>();
         public DateOnly ReleaseDate { get; set; }
     }
 }

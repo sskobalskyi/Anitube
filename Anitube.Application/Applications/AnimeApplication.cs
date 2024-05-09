@@ -4,7 +4,7 @@ using Anitube.Core.Entities;
 using Anitube.Core.Repositories;
 using AutoMapper;
 
-namespace Anitube.Application.UserApplication
+namespace Anitube.Application.Applications
 {
     public class AnimeApplication : IAnimeApplication
     {
@@ -42,14 +42,21 @@ namespace Anitube.Application.UserApplication
             return _repository.UpdateAsync(_mapper.Map<Anime>(entity));
         }
 
+        public Task AddGenreAsync(AddAnimeGenreDTO entity)
+        {
+            return _repository.AddGenreAsync(_mapper.Map<AnimeGenre>(entity));
+        }
+
+        public Task AddVoiceoverAsync(AddAnimeVoiceoverDTO entity)
+        {
+            return _repository.AddVoiceoverAsync(_mapper.Map<AnimeVoiceover>(entity));
+        }
+
         public Task DeleteAsync(AnimeLightDTO entity)
         {
             return _repository.DeleteAsync(_mapper.Map<Anime>(entity));
         }
 
-        public Task AddGenreAsync(AddAnimeGenreDTO entity)
-        {
-            return _repository.AddGenreAsync(_mapper.Map<AnimeGenre>(entity));
-        }
+
     }
 }

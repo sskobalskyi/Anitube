@@ -29,6 +29,8 @@ namespace Anitube.Persistance.Repositories
                 .Include(a => a.Episodes)
                 .Include(a => a.AnimeGenres)
                 .ThenInclude(ag => ag.Category)
+                .Include(a => a.Voiceovers)
+                .ThenInclude(v => v.Studio)
                 .FirstOrDefaultAsync(a => a.Id == id);
         }
 
@@ -47,6 +49,12 @@ namespace Anitube.Persistance.Repositories
         public Task AddGenreAsync(AnimeGenre entity)
         {
             _context.AnimeGenres.Add(entity);
+            return _context.SaveChangesAsync();
+        }
+
+        public Task AddVoiceoverAsync(AnimeVoiceover entity)
+        {
+            _context.AnimeVoiceovers.Add(entity);
             return _context.SaveChangesAsync();
         }
 
