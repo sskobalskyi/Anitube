@@ -2,11 +2,13 @@
 using Anitube.API.ViewModels.AnimeViewModels;
 using Anitube.API.ViewModels.Episode;
 using Anitube.API.ViewModels.GenreViewModels;
+using Anitube.API.ViewModels.UserViewModels;
 using Anitube.API.ViewModels.VoiceoverActorViewModels;
 using Anitube.API.ViewModels.VoiceoverStudioViewModels;
 using Anitube.Application.DTOs.AnimeDTOs;
 using Anitube.Application.DTOs.EpisodeDTOs;
 using Anitube.Application.DTOs.GenreDTOs;
+using Anitube.Application.DTOs.UserDTOs;
 using Anitube.Application.DTOs.VoiceoverActorDTOs;
 using Anitube.Application.DTOs.VoiceoverStudioDTOs;
 using AutoMapper;
@@ -50,6 +52,11 @@ namespace Anitube.API.ViewModels.Profiles
             #region VoiceoverActor
             CreateMap<VoiceoverActorViewModel, VoiceoverActorDTO>().ReverseMap();
             CreateMap<CreateVoiceoverActorViewModel, CreateVoiceoverActorDTO>().ReverseMap();
+            #endregion
+
+            #region User
+            CreateMap<UserViewModel, UserDTO>().ReverseMap();
+            CreateMap<CreateUserViewModel, CreateUserDTO>().ReverseMap();
             #endregion
         }
     }
